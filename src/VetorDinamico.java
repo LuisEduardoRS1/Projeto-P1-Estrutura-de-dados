@@ -24,6 +24,13 @@ public class VetorDinamico {
         }
     }
 
+    public void listarReverso(){
+        System.out.println("Todos os processos: ");
+        for(int i = ocupacao-1; i > 0; i--){
+            System.out.println(listaProcessos[i]);
+        }
+    }
+
     public void adiciona(Processo processo){
         if(estaCheio()){
             redimenciona(capacidade * 2);
@@ -60,5 +67,10 @@ public class VetorDinamico {
             }
         }
         return -1;
+    }
+
+    //TODO, analisar esta implementação
+    public Processo peek(){
+        return listaProcessos[ocupacao-1];
     }
 }
