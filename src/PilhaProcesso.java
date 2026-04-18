@@ -9,8 +9,8 @@ public class PilhaProcesso {
         vetorDinamico.adiciona(processo);
     }
 
-    public void pop(){
-        vetorDinamico.remove();
+    public Processo pop(){
+        return vetorDinamico.remove();
     }
 
     public Processo peek(){
@@ -19,5 +19,9 @@ public class PilhaProcesso {
 
     public void imprimir(){
         vetorDinamico.listarReverso();
+    }
+
+    public void listar(){
+        vetorDinamico.listar();
     }
 }
