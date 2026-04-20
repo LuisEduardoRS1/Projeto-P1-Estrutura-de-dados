@@ -55,31 +55,43 @@ public class PilhaPrioridade {
         }
     }
 
-    public int tamanho(){
+    public int tamanho() {
         return pilhaBaixa.tamanho() + pilhaMedia.tamanho() + pilhaUrgente.tamanho();
     }
 
-    public void listar(){
-        if(pilhaUrgente.estaVazio()){
-            System.out.println("A pilha de processos urgentes está vazia");
-        }else{
+    public void listar() {
+        if (pilhaUrgente.estaVazio()) {
+            System.out.println("A pilha de processos urgentes está vazia\n");
+        } else {
             System.out.println("Processos Urgentes:");
             pilhaUrgente.imprimir();
         }
 
         System.out.println("");
         if (pilhaMedia.estaVazio()) {
-            System.out.println("A pilha de processos médios está vazia");
+            System.out.println("A pilha de processos médios está vazia\n");
         } else {
             System.out.println("Processos médios:");
             pilhaMedia.imprimir();
         }
 
         if (pilhaBaixa.estaVazio()) {
-            System.out.println("A pilha de processos baixos está vazia");
+            System.out.println("A pilha de processos baixos está vazia\n");
         } else {
             System.out.println("Processos baixos:");
             pilhaBaixa.imprimir();
+        }
+    }
+
+    public void limpar() {
+        while (!pilhaBaixa.estaVazio()) {
+            pilhaBaixa.pop();
+        }
+        while (!pilhaMedia.estaVazio()) {
+            pilhaMedia.pop();
+        }
+        while (!pilhaUrgente.estaVazio()) {
+            pilhaUrgente.pop();
         }
     }
 }

@@ -16,5 +16,8 @@ public class TesteVetorDinamico {
         vetorDinamico.remove();
 
         System.out.println("Capacidade: " + vetorDinamico.getCapacidade());
+
+        int protocolo = vetorDinamico.buscarPorProtocolo(1);
+        System.out.println("Índice localizado: " + protocolo);
     }
 }

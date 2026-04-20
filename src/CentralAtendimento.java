@@ -9,6 +9,7 @@ public class CentralAtendimento {
 
     public void abrirProcesso(Processo p){
         atendimentosPendentes.push(p);
+        auxiliar.limpar();
     }
 
     public void atenderProximo(){
@@ -21,16 +22,19 @@ public class CentralAtendimento {
 
     public void desfazerUltimoAtendimento(){
         Processo processo = auxiliar.peek();
-        System.out.println(processo);
+        System.out.println("Atendimento desfeito: ");
+        System.out.println(processo + "\n");
         auxiliar.pop();
         atendimentosPendentes.push(processo);
     }
 
     public void listarPendentes(){
+        System.out.println("Processos em aberto: \n" );
         atendimentosPendentes.listar();
     }
 
     public void listarHistorico(){
+        System.out.println("Processos já fechados: \n");
         auxiliar.listar();
     }
 }
