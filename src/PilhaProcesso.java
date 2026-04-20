@@ -10,10 +10,16 @@ public class PilhaProcesso {
     }
 
     public Processo pop(){
+        if(estaVazio()){
+            throw new PilhaVaziaException("A pilha está vazia");
+        }
         return vetorDinamico.remove();
     }
 
     public Processo peek(){
+        if(estaVazio()){
+            throw new PilhaVaziaException("A pilha está vazia");
+        }
         return vetorDinamico.peek();
     }
 
