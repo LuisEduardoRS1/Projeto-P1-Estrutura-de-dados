@@ -11,8 +11,6 @@ public class Processo {
     public static int contador;
 
     public Processo(String solicitante, String tipoServico, int prioridade) {
-        // TODO, implementar o contador para a prioridade
-        //TODO, lembrar sobre a data e hora
         
         this.solicitante = solicitante;
         this.tipoServico = tipoServico;
@@ -22,7 +20,6 @@ public class Processo {
         contador++;
         this.protocolo = contador;
     }
-    //TODO, implementar o tipo de prioridade
     @Override
     public String toString(){
        return ("[#" + protocolo +"] " + solicitante + " | " + tipoServico + " | " + prioridade + " | " + dataHora);

@@ -13,7 +13,8 @@ public class CentralAtendimento {
 
     public void atenderProximo(){
         Processo processo = atendimentosPendentes.peek();
-        System.out.println(processo);
+        System.out.println("Processo atendido:");
+        System.out.println(processo + "\n");
         atendimentosPendentes.pop();
         auxiliar.push(processo);
     }

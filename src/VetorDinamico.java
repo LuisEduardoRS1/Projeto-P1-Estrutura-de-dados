@@ -41,13 +41,12 @@ public class VetorDinamico {
 
     public Processo remove(){
         if(estaVazio()){
-            //TODO, alterar o remove
+            throw new PilhaVaziaException("A pilha está vazia");
         }
         Processo aux = listaProcessos[--ocupacao];
         if((capacidade >= 4) && (ocupacao <= capacidade/4)){
             redimenciona(capacidade / 2);
         }
-        System.out.println(capacidade);
         return aux;
     }
     
@@ -69,12 +68,15 @@ public class VetorDinamico {
         return -1;
     }
 
-    //TODO, analisar esta implementação
     public Processo peek(){
         return listaProcessos[ocupacao-1];
     }
 
     public int getOcupacao(){
         return ocupacao;
+    }
+
+    public int getCapacidade(){
+        return capacidade;
     }
 }

@@ -7,10 +7,14 @@ public class TesteVetorDinamico {
         vetorDinamico.adiciona(new Processo("James ", "Suporte", 3));
         vetorDinamico.adiciona(new Processo("Teste ", "Suporte", 2));
 
+        System.out.println("Capacidade: " + vetorDinamico.getCapacidade());
+
         vetorDinamico.listar();
 
         vetorDinamico.remove();
         vetorDinamico.remove();
         vetorDinamico.remove();
+
+        System.out.println("Capacidade: " + vetorDinamico.getCapacidade());
     }
 }
