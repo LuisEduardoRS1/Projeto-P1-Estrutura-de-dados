@@ -27,6 +27,8 @@ public class MenuAtendimento {
 
                     centralAtendimento.abrirProcesso(new Processo(solicitante, tipoServico, prioridade));
 
+                    System.out.println("Processo Aberto!");
+
                     break;
                 case 2:
                     centralAtendimento.atenderProximo();

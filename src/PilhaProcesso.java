@@ -24,4 +24,12 @@ public class PilhaProcesso {
     public void listar(){
         vetorDinamico.listar();
     }
+
+    public boolean estaVazio(){
+        return vetorDinamico.estaVazio();
+    }
+
+    public int tamanho(){
+        return vetorDinamico.getOcupacao();
+    }
 }

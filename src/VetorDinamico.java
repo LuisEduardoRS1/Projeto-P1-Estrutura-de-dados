@@ -73,4 +73,8 @@ public class VetorDinamico {
     public Processo peek(){
         return listaProcessos[ocupacao-1];
     }
+
+    public int getOcupacao(){
+        return ocupacao;
+    }
 }
