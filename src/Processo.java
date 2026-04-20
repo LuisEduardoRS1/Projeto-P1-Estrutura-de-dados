@@ -1,18 +1,26 @@
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 public class Processo {
     private int protocolo;
     private String solicitante;
     private String tipoServico;
     private int prioridade;
     private String dataHora;
+    public static int contador;
 
-    public Processo(String solicitante, String tipoServico, int prioridade, String dataHora) {
+    public Processo(String solicitante, String tipoServico, int prioridade) {
         // TODO, implementar o contador para a prioridade
         //TODO, lembrar sobre a data e hora
         
         this.solicitante = solicitante;
         this.tipoServico = tipoServico;
         this.prioridade = prioridade;
-        this.dataHora = dataHora;
+        LocalDateTime agora = LocalDateTime.now();
+        this.dataHora = agora.format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm"));
+        contador++;
+        this.protocolo = contador;
     }
     //TODO, implementar o tipo de prioridade
     @Override
