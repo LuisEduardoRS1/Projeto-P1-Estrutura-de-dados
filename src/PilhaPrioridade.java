@@ -64,21 +64,22 @@ public class PilhaPrioridade {
             System.out.println("A pilha de processos urgentes está vazia");
         }else{
             System.out.println("Processos Urgentes:");
-            pilhaUrgente.listar();
+            pilhaUrgente.imprimir();
         }
 
+        System.out.println("");
         if (pilhaMedia.estaVazio()) {
             System.out.println("A pilha de processos médios está vazia");
         } else {
             System.out.println("Processos médios:");
-            pilhaMedia.listar();
+            pilhaMedia.imprimir();
         }
 
         if (pilhaBaixa.estaVazio()) {
             System.out.println("A pilha de processos baixos está vazia");
         } else {
             System.out.println("Processos baixos:");
-            pilhaBaixa.listar();
+            pilhaBaixa.imprimir();
         }
     }
 }

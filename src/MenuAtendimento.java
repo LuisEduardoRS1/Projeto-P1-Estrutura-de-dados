@@ -13,6 +13,7 @@ public class MenuAtendimento {
             System.out.println("[1] Para abrir um Processo \n[2] Para atender o proximo processo na fila \n[3] Para desfazer o ultimo atendimento \n[4] Para listar os Processos pendentes \n[5] Para listar os Processos já atendidos \n[0] Para sair do sistema");
             opcao = scanner.nextInt();
             scanner.nextLine();
+            System.out.println("");
             
             switch (opcao) {
                 case 1:
@@ -42,7 +43,6 @@ public class MenuAtendimento {
                 case 5:
                     centralAtendimento.listarHistorico();
                     break;
-            
             }
         }
         

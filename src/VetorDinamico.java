@@ -25,10 +25,10 @@ public class VetorDinamico {
     }
 
     public void listarReverso(){
-        System.out.println("Todos os processos: ");
-        for(int i = ocupacao-1; i > 0; i--){
+        for(int i = ocupacao-1; i >= 0; i--){
             System.out.println(listaProcessos[i]);
         }
+        System.out.println("");
     }
 
     public void adiciona(Processo processo){

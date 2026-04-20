@@ -1,10 +1,10 @@
 public class CentralAtendimento {
-    private PilhaProcesso atendimentosPendentes;
-    private PilhaProcesso auxiliar;
+    private PilhaPrioridade atendimentosPendentes;
+    private PilhaPrioridade auxiliar;
 
     public CentralAtendimento(){
-        atendimentosPendentes = new PilhaProcesso();
-        auxiliar = new PilhaProcesso();
+        atendimentosPendentes = new PilhaPrioridade();
+        auxiliar = new PilhaPrioridade();
     }
 
     public void abrirProcesso(Processo p){
@@ -12,11 +12,17 @@ public class CentralAtendimento {
     }
 
     public void atenderProximo(){
-        auxiliar.push(atendimentosPendentes.pop());
+        Processo processo = atendimentosPendentes.peek();
+        System.out.println(processo);
+        atendimentosPendentes.pop();
+        auxiliar.push(processo);
     }
 
     public void desfazerUltimoAtendimento(){
-        atendimentosPendentes.push(auxiliar.pop());
+        Processo processo = auxiliar.peek();
+        System.out.println(processo);
+        auxiliar.pop();
+        atendimentosPendentes.push(processo);
     }
 
     public void listarPendentes(){
